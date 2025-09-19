@@ -1,3 +1,5 @@
+# 🐈 Tacticat
+
 My personal neovim color theme/scheme.
 
 Most colorschemes I've come across were built with no regard for code
@@ -17,3 +19,26 @@ This theme was loosely inspired by the `tacticat` counter-strike skin for the CZ
 Dark theme coming soon.
 Screenshots coming soon.
 
+## 📦 Installation
+
+with lazy.nvim
+
+```lua
+	{
+		dir = 'leg7/tacticat.nvim',
+		lazy = false,
+		priority = 1000,
+		opts = {
+			autoload = true,
+			highlight_column = {
+				enable = true,
+				number = 120,
+			},
+			integrations = {
+				which_key = true,
+				git_signs = true,
+				cmp = true,
+			}
+		},
+	},
+```
