@@ -1,6 +1,8 @@
-# 🐈 Tacticat
+# 😸 Tacticat 😸
 
-My personal neovim color theme/scheme.
+![preview](./images/preview.png)
+
+## 🤔 Rationale
 
 Most colorschemes I've come across were built with no regard for code
 readability. They feature way too many colors, all with poor contrast scores,
@@ -14,10 +16,9 @@ glance.
 Foreground colors were also chosen to have good contrast scores with their
 background colors to ensure readability.
 
-This theme was loosely inspired by the `tacticat` counter-strike skin for the CZ75-auto sidearm.
+This theme was loosely inspired by the *tacticat* counter-strike skin for the CZ75-auto sidearm.
 
 Dark theme coming soon.
-Screenshots coming soon.
 
 ## 📦 Installation
 
