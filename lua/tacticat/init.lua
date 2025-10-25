@@ -214,7 +214,7 @@ function M.load()
 	set(0, 'Macro',     { link = 'PreProc' })
 	set(0, 'PreCondit', { link = 'PreProc' })
 
-	set(0, 'Type',         { fg = colors.blue.regular })
+	set(0, 'Type',         { fg = colors.blue.bright })
 	set(0, 'StorageClass', { link = 'Type' })
 	set(0, 'Structure',    { link = 'Type' })
 	set(0, 'Typedef',      { link = 'Type' })
