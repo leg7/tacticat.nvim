@@ -13,7 +13,6 @@ local colors = {
 		dark    = '#440a86'
 	},
 
-
 	blue = {
 		regular = '#152eaf',
 		bright  = '#394cb5',
@@ -204,14 +203,15 @@ function M.load()
 	set(0, 'Statement',   { fg = colors.black.regular })
 	set(0, 'Conditional', { fg = colors.black.regular, italic = true })
 	set(0, 'Repeat',      { fg = colors.black.regular, italic = true })
-
+	set(0, 'Label',       { fg = colors.black.regular, italic = false })
+	set(0, 'Operator',    { fg = colors.black.regular, italic = false })
 	set(0, 'Keyword',     { fg = colors.black.regular, italic = true })
 	set(0, 'Exception',   { link = 'Statement' })
 
-	set(0, 'PreProc',   { link = 'Constant' })
+	set(0, 'PreProc',   { link = 'Keyword' })
 	set(0, 'Include',   { link = 'PreProc' })
 	set(0, 'Define',    { link = 'PreProc' })
-	set(0, 'Macro',     { link = 'PreProc' })
+	set(0, 'Macro',     { link = 'Constant' })
 	set(0, 'PreCondit', { link = 'PreProc' })
 
 	set(0, 'Type',         { fg = colors.blue.bright })
@@ -248,10 +248,11 @@ function M.load()
 
 	set(0, '@constant',                    { link = 'Constant' })
 	set(0, '@constant.builtin',            { link = '@constant' })
-	set(0, '@constant.macro',              { link = '@constant' })
+	set(0, '@constant.macro',              { link = 'Macro' })
 
-	set(0, '@module',                      { link = 'PreProc' })
+	set(0, '@module',                      { link = '@type' })
 	set(0, '@module.builtin',              { link = '@module' })
+
 	set(0, '@label',                       { link = 'Label' })
 
 	set(0, '@string',                      { link = 'String' })
@@ -305,7 +306,7 @@ function M.load()
 	set(0, '@keyword.conditional.ternary', { link = '@keyword' })
 
 	set(0, '@keyword.directive',           { link = '@keyword' })
-	set(0, '@keyword.directive.define',    { link = '@keyword' })
+	set(0, '@keyword.directive.define',    { link = 'Define' })
 
 	set(0, '@punctuation.delimiter',       { link = 'Delimiter' })
 	set(0, '@punctuation.bracket',         { link = 'Delimiter' })
@@ -354,6 +355,30 @@ function M.load()
 	-- set(0, '@tag.builtin',                 { link = '@tag.builtin' })
 	-- set(0, '@tag.attribute',               { link = '@tag.attribute' })
 	-- set(0, '@tag.delimiter',               { link = '@tag.delimiter' })
+
+	-- Lsp highlighting
+	--
+	-- set(0, '@lsp.type.class',         { link = '@type' })
+	-- set(0, '@lsp.type.enum',          { link = '@type' })
+	-- set(0, '@lsp.type.interface',     { link = '@type' })
+	-- set(0, '@lsp.type.struct',        { link = '@type' })
+	-- set(0, '@lsp.type.type',          { link = '@type' })
+	-- set(0, '@lsp.type.builtinType',   { link = '@type.builtin' })
+	-- set(0, '@lsp.type.function',      { link = '@function' })
+	-- set(0, '@lsp.type.method',        { link = '@function.method' })
+	-- set(0, '@lsp.type.variable',      { link = '@variable' })
+	-- set(0, '@lsp.type.parameter',     { link = '@variable.parameter' })
+	-- set(0, '@lsp.type.property',      { link = '@attribute' })
+	-- set(0, '@lsp.type.namespace',     { link = '@module' })
+	-- set(0, '@lsp.type.macro',         { link = '@macro' })
+	-- set(0, '@lsp.type.enumMember',    { link = '@constant' })
+	-- set(0, '@lsp.type.decorator',     { link = '@function' })
+	-- set(0, '@lsp.type.modifier',      { link = '@keyword' })
+	-- set(0, '@lsp.type.comment',       { link = '@comment' })
+	-- set(0, '@lsp.type.string',        { link = '@string' })
+	-- set(0, '@lsp.type.number',        { link = '@number' })
+	-- set(0, '@lsp.type.operator',      { link = '@operator' })
+	-- set(0, '@lsp.type.keyword',       { link = '@keyword' })
 
 	-- Diagnostics
 
